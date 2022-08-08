@@ -3,10 +3,11 @@ C:\ProjectsCsharp\challenge-s4e\sample-s4e\sample-s4e\bin\Debug\sample-s4e.exe
 C:\ProjectsCsharp\challenge-s4e\sample-s4e\sample-s4e\bin\Debug\sample-s4e.pdb
 C:\ProjectsCsharp\challenge-s4e\sample-s4e\sample-s4e\bin\Debug\sample-s4e.xml
 C:\ProjectsCsharp\challenge-s4e\sample-s4e\sample-s4e\obj\Debug\sample-s4e.vbproj.AssemblyReference.cache
-C:\ProjectsCsharp\challenge-s4e\sample-s4e\sample-s4e\obj\Debug\sample_s4e.Form1.resources
 C:\ProjectsCsharp\challenge-s4e\sample-s4e\sample-s4e\obj\Debug\sample_s4e.Resources.resources
 C:\ProjectsCsharp\challenge-s4e\sample-s4e\sample-s4e\obj\Debug\sample-s4e.vbproj.GenerateResource.cache
 C:\ProjectsCsharp\challenge-s4e\sample-s4e\sample-s4e\obj\Debug\sample-s4e.vbproj.CoreCompileInputs.cache
 C:\ProjectsCsharp\challenge-s4e\sample-s4e\sample-s4e\obj\Debug\sample-s4e.exe
 C:\ProjectsCsharp\challenge-s4e\sample-s4e\sample-s4e\obj\Debug\sample-s4e.xml
 C:\ProjectsCsharp\challenge-s4e\sample-s4e\sample-s4e\obj\Debug\sample-s4e.pdb
+C:\ProjectsCsharp\challenge-s4e\sample-s4e\sample-s4e\obj\Debug\sample_s4e.Companies.resources
+C:\ProjectsCsharp\challenge-s4e\sample-s4e\sample-s4e\obj\Debug\sample_s4e.Associates.resources

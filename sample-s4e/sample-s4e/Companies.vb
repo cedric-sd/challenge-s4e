@@ -1,6 +1,5 @@
 ﻿Imports System.Data.SqlClient
-
-Public Class Form1
+Public Class Companies
     Private connection As SqlConnection
     Private command As SqlCommand
     Private dataAdapter As SqlDataAdapter
@@ -12,13 +11,12 @@ Public Class Form1
             connection = New SqlConnection("Server=db-develop-s4e.csjhouhm11g4.us-east-1.rds.amazonaws.com;
                             Database=sample-s4e; User Id=admin; Password=pdQGyuW>J#;")
 
-            sql = "INSERT INTO associates (Nome,cpf,data_nascimento)
-                VALUES (@nome, @cpf, @data_nascimento)"
+            sql = "INSERT INTO companies (Nome,cnpj)
+                VALUES (@nome, @cnpj)"
 
             command = New SqlCommand(sql, connection)
             command.Parameters.AddWithValue("@nome", inputNome.Text)
-            command.Parameters.AddWithValue("@cpf", inputCpf.Text)
-            command.Parameters.AddWithValue("@data_nascimento", inputData.Value)
+            command.Parameters.AddWithValue("@cnpj", inputCnpj.Text)
 
             connection.Open()
             command.ExecuteNonQuery()
@@ -35,7 +33,7 @@ Public Class Form1
             connection = New SqlConnection("Server=db-develop-s4e.csjhouhm11g4.us-east-1.rds.amazonaws.com;
                             Database=sample-s4e; User Id=admin; Password=pdQGyuW>J#;")
 
-            sql = "SELECT * FROM associates WHERE ativo = 1"
+            sql = "SELECT * FROM companies WHERE ativo = 1"
 
             command = New SqlCommand(sql, connection)
             dataAdapter = New SqlDataAdapter(sql, connection)
@@ -59,7 +57,7 @@ Public Class Form1
             connection = New SqlConnection("Server=db-develop-s4e.csjhouhm11g4.us-east-1.rds.amazonaws.com;
                             Database=sample-s4e; User Id=admin; Password=pdQGyuW>J#;")
 
-            sql = "SELECT * FROM associates WHERE ID = @ID AND ativo = 1"
+            sql = "SELECT * FROM companies WHERE ID = @ID AND ativo = 1"
 
             command = New SqlCommand(sql, connection)
             command.Parameters.AddWithValue("@ID", inputId.Text)
@@ -69,7 +67,7 @@ Public Class Form1
 
             Do While dataReader.Read
                 inputNome.Text = dataReader("nome")
-                inputCpf.Text = dataReader("cpf")
+                inputCnpj.Text = dataReader("cnpj")
             Loop
         Catch ex As Exception
             MessageBox.Show(ex.Message)
@@ -85,14 +83,12 @@ Public Class Form1
             connection = New SqlConnection("Server=db-develop-s4e.csjhouhm11g4.us-east-1.rds.amazonaws.com;
                             Database=sample-s4e; User Id=admin; Password=pdQGyuW>J#;")
 
-            sql = "UPDATE associates SET nome = @nome, cpf = @cpf, data_nascimento = @data_nascimento 
-                    WHERE id = @id"
+            sql = "UPDATE companies SET nome = @nome, cnpj = @cnpj WHERE id = @id"
 
             command = New SqlCommand(sql, connection)
             command.Parameters.AddWithValue("@id", inputId.Text)
             command.Parameters.AddWithValue("@nome", inputNome.Text)
-            command.Parameters.AddWithValue("@cpf", inputCpf.Text)
-            command.Parameters.AddWithValue("@data_nascimento", inputData.Value)
+            command.Parameters.AddWithValue("@cnpj", inputCnpj.Text)
 
             connection.Open()
             command.ExecuteNonQuery()
@@ -109,7 +105,7 @@ Public Class Form1
             connection = New SqlConnection("Server=db-develop-s4e.csjhouhm11g4.us-east-1.rds.amazonaws.com;
                             Database=sample-s4e; User Id=admin; Password=pdQGyuW>J#;")
 
-            sql = "UPDATE associates SET ativo = 0 WHERE id = @id"
+            sql = "UPDATE companies SET ativo = 0 WHERE id = @id"
             command = New SqlCommand(sql, connection)
             command.Parameters.AddWithValue("@id", inputId.Text)
 
